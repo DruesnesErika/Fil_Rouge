@@ -42,7 +42,7 @@ CREATE TABLE clients_particuliers(
    cli_pa_adresse VARCHAR(255),
    cli_pa_phone VARCHAR(50),
    cli_pa_mail VARCHAR(50),
-   cli_pa_cp VARCHAR(6),
+   cli_pa_cp VARCHAR(7),
    cli_pa_pays VARCHAR(50),
    cli_pa_nom VARCHAR(50),
    cli_pa_prenom VARCHAR(50),
@@ -57,7 +57,7 @@ CREATE TABLE clients_professionels(
    cli_pro_adresse VARCHAR(255),
    cli_pro_phone VARCHAR(50),
    cli_pro_mail VARCHAR(50),
-   cli_pro_cp VARCHAR(6),
+   cli_pro_cp VARCHAR(7),
    cli_pro_coheficient DECIMAL(5,2),
    cli_pro_societe VARCHAR(50),
    cli_pro_cli_ref VARCHAR(50),
@@ -86,13 +86,6 @@ CREATE TABLE categories(
    PRIMARY KEY(cat_id)
 );
 
-CREATE TABLE sous_categories(
-   sous_cat_id INT(10) NOT NULL AUTO_INCREMENT,
-   sous_cat_nom VARCHAR(50),
-   cat_id INT NOT NULL,
-   PRIMARY KEY(sous_cat_id),
-   FOREIGN KEY(cat_id) REFERENCES categories(cat_id)
-);
 
 CREATE TABLE equipe(
    equ_id INT(10) NOT NULL AUTO_INCREMENT,
@@ -109,6 +102,15 @@ CREATE TABLE service_commercial(
    PRIMARY KEY(ser_com_id),
    FOREIGN KEY(cli_pa_id) REFERENCES clients_particuliers(cli_pa_id),
    FOREIGN KEY(cli_pro_id) REFERENCES clients_professionels(cli_pro_id)
+);
+
+CREATE TABLE compose_de(
+   cat_id INT,
+   sous_cat_id INT,
+   sous_categories VARCHAR(50),
+   PRIMARY KEY(cat_id, sous_cat_id),
+   FOREIGN KEY(cat_id) REFERENCES categories(cat_id),
+   FOREIGN KEY(sous_cat_id) REFERENCES categories(cat_id)
 );
 
 CREATE TABLE occuper(
@@ -158,6 +160,9 @@ CREATE TABLE liste_commandes(
    reduction INT,
    prix_unite_ht DECIMAL(5,2),
    paiement BOOLEAN NOT NULL,
+   quantite INT,
+   prix_total DECIMAL(9,2),
+   reduction_supplementaire DECIMAL(7,2),
    PRIMARY KEY(pro_id, com_id),
    FOREIGN KEY(pro_id) REFERENCES produits(pro_id),
    FOREIGN KEY(com_id) REFERENCES commandes(com_id)
