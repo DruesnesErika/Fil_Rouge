@@ -1,0 +1,160 @@
+
+.img_a {
+    width:950px;
+    margin-left:40px;
+   
+}
+.img_logo{
+    z-index: 1000;
+    width:400px;
+    margin-top: -10px;
+    margin-right: -4px;
+}
+
+.img_b {
+
+    width:235px;
+    float: right;
+
+}
+.img_c {
+margin-top:45px;
+margin-left: -12px;
+width: 102%;
+margin-right: -135px;
+margin-bottom: 18px;
+}
+.img_d{
+    margin-left: -6px;
+   width: 100%;
+}
+.container{
+    width:100%;
+}
+.navone{
+
+    font-size: 28px;
+    color:white;
+    text-decoration: none;
+}
+.navonetwo{
+    font-size: 28px;
+    color:white;
+    text-decoration: none;
+    padding-right: 35px;
+   
+.secondary_bar{
+flex-direction: word-wrap: ;;
+}
+
+.secondary{
+   margin-top: -25px;
+   margin-bottom: -25px;
+    font-size: 28px;
+    color:white;
+    text-decoration: none;
+    
+}
+.dark{
+   flex-direction:row;
+    font-size: 25px;
+    color:white;
+    text-decoration: none;
+}
+a{
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+body{
+    
+    color:black;
+background-color:white;
+    background-image:url(Charte/BACKGROUND/background_village.png);
+}
+article{
+    margin-left: 12px;
+    margin-right:12px;
+ 
+    z-index: 1;
+    background-color:rgba(255, 255, 255, 0.863);
+}
+.nav-link{
+
+    font-size: 28px;
+    color:rgb(255, 255, 255);
+margin-bottom: 10px;
+    width:300px;
+}
+.nav-link-img{
+  width: 58px;
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+
+.html{
+    width: 100%;
+}
+.categories{
+    
+    width: 100%;
+}
+.cat{
+    margin-left: 38px;
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(8, 11, 214);
+}
+.box{
+    margin-left: 12px;
+}
+.navbar{
+   
+    background-color:rgba(255, 255, 255, 0.863);
+}
+.partenaires{  
+    text-decoration: none;
+
+    margin-top: -200px;
+  font-size: 30px;
+margin-left: 352px;
+    color: rgb(8, 11, 214);
+}
+.m_ventes{
+  
+ margin-left: 25px;
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(8, 11, 214);
+}
+.saxo{
+    width: 300px;
+    height: 180px;
+}
+.p{
+    margin-bottom: 10px;
+    margin-left: 6px;
+    width: 301px;
+    height: 180px;
+}
+.pia{
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 60px;
+    margin-bottom: 50px;
+}
+.sax{
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 50px;
+}
+.gui{
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+}
+.p_logo{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}

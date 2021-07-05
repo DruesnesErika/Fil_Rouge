@@ -1,0 +1,88 @@
+PRODUITS
+description:
+id
+nom
+
+-libellé court
+-libéllé long
+un prix d'achat 
+une photo
+référence fournisseur
+un prix de vente (prix d'achat avec un coefficient en fonction de la
+catégorie du client)
+stock
+date d'ajout
+date de modification
+stock d'alerte
+
+FOURNISSEURS (constructeurs ou importateurs)
+id
+société
+pays
+cp
+téléphone
+mail
+contact nom
+adresse
+
+EQUIPE
+arborescence:
+
+
+CATALOGUE
+Catégories -> Sous-catégories
+id
+nom
+
+ASSOCIATION: l'équipe met à jour le stock, valide ou pas 
+les publications, désactive d'anciens produits. Association entre
+équipe et fournisseur. association entre produits et fournisseur
+association entre catalogue et produits. Et une association entre 
+équipe et catalogue.
+
+CLIENTS PARTICULIERS
+paiement à la commande exigée
+nom 
+prenom
+id
+adresse
+telephone
+mail
+cp
+pays
+
+CLIENTS PROFESSIONNELS
+paiement différé
+nom
+prenom
+id
+adresse 
+telephone
+mail
+cp
+pays
+société
+client ref
+
+SERVICE COMMERCIAL
+commercial (pour particuliers)
+
+COMMANDES
+date de commande
+date de facturation
+date de livraison
+date d'expédition
+adresse de livraison
+adresse de facturation
+statut commande
+id 
+
+DETAILS COMMANDE
+réduction
+taxe
+id
+prix d'unité
+
+EDITER (association entre commandes et details de commande)
+bon de livraison 
+facture
